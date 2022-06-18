@@ -10,4 +10,5 @@
 3) Удалить в файле App.config  тег строки подключения
 4) Добавить заново в папку Entities (ПКМ / Добавить / Создать элемент / Модель Ado.Net Edm)
 5) После добовления переходим в файл 
- ![Image alt](https://github.com/crushednat123/Librarian/raw/master/Librarian/Картинки/bd1.png)
+ 
+![image info](https://github.com/crushednat123/Librarian/raw/master/Librarian/pictures/bd1.png)
