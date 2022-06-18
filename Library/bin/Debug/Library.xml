@@ -1,0 +1,2339 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Library</name>
+    </assembly>
+    <members>
+        <member name="T:Library.App">
+            <summary>
+            Логика взаимодействия для App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:Library.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:Library.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="M:Library.Logic.ButtonStyles.ButtunDafault(System.Windows.Controls.Button,FontAwesome.Sharp.IconImage)">
+            <summary>
+            Отключает кнопку
+            </summary>
+        </member>
+        <member name="M:Library.Logic.CheckBoxCheket.CheckBoxPasswordChek(System.Windows.Controls.CheckBox,System.Windows.Controls.PasswordBox,System.Windows.Controls.TextBox)">
+            <summary>
+            Скрывает и отображает пароль
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Logic.ColorIconImages.ForegroundIcon(FontAwesome.Sharp.IconImage,FontAwesome.Sharp.IconImage,FontAwesome.Sharp.IconImage,FontAwesome.Sharp.IconImage,FontAwesome.Sharp.IconImage,FontAwesome.Sharp.IconImage,FontAwesome.Sharp.IconImage,FontAwesome.Sharp.IconImage,System.Int32)">
+            <summary>
+            Меняет цвет иконок
+            </summary>
+        </member>
+        <member name="M:Library.Logic.DateUser.IdCheck(System.Int32,System.Int32,System.Windows.Controls.ListView,System.Windows.Controls.Border,System.Byte)">
+            <summary>
+            Получение айдишника пользователя
+            </summary>
+            <param name="idUsers"></param>
+            <param name="idDelete"></param>
+            <param name="listName"></param>
+            <param name="borderName"></param>
+            <param name="typeUsers"></param>
+        </member>
+        <member name="M:Library.Logic.DocymentConvertToXPS.DocymentReader(System.Byte[],System.Windows.Controls.DocumentViewer)">
+            <summary>
+             Читает массив, и преобразовывает в документ в формате XPS
+            </summary>
+            <param name="array"></param>
+        </member>
+        <member name="M:Library.Logic.ImageVisible.VisibleImage(System.Windows.Controls.Button,System.Windows.Controls.Border,System.Windows.Controls.Button,System.Windows.Controls.Button,System.Windows.Controls.Button,System.Byte)">
+            <summary>
+            Скрывает и отображает картинку пользователя
+            </summary>
+        </member>
+        <member name="M:Library.Logic.NavigationManager.SaveDate(System.String)">
+            <summary>
+            Сохранение
+            </summary>
+        </member>
+        <member name="M:Library.Logic.OpenFales.FalesOpenFale(System.Windows.Controls.TextBox,System.String)">
+            <summary>
+            Позволяет записать путь файла в текст бокс
+            </summary>
+            <param name="textBox"></param>
+        </member>
+        <member name="M:Library.Logic.TextBlockVivod.UserInfo(System.Windows.Controls.TextBlock,System.Windows.Controls.TextBlock,System.Windows.Controls.TextBlock,System.Windows.Controls.TextBlock)">
+            <summary>
+            Выводит ФИО, роль, и по одной букве от фамилии и имени 
+            </summary>
+            <param name="name"></param>
+            <param name="surName"></param>
+            <param name="role"></param>
+            <param name="char1NamAndSurName"></param>
+        </member>
+        <member name="T:Library.Pages.DocumentBooksPage">
+            <summary>
+            Логика взаимодействия для DocumentBooksPage.xaml
+            </summary>
+            <summary>
+            DocumentBooksPage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.DocumentBooksPage.DocumentShow">
+            <summary>
+            Отображает документ
+            </summary>
+        </member>
+        <member name="M:Library.Pages.DocumentBooksPage.Page_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Срабатывает при полной привязке 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.DocumentBooksPage.btnPrint_CanExecute(System.Object,System.Windows.Input.CanExecuteRoutedEventArgs)">
+            <summary>
+            Отключает кнопку печати
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.DocumentBooksPage.btnCopy_CanExecute(System.Object,System.Windows.Input.CanExecuteRoutedEventArgs)">
+            <summary>
+            Отключает кнопку копирования
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.DocumentBooksPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageAdmin.AdminStart">
+            <summary>
+            Логика взаимодействия для AdminStart.xaml
+            </summary>
+            <summary>
+            AdminStart
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageAdmin.AdminStart.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageLibrarian.LibrarianStart">
+            <summary>
+            Логика взаимодействия для LibrarianStart.xaml
+            </summary>
+            <summary>
+            LibrarianStart
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.LibrarianStart.startLibrarian_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Центральное меню библиотекаря
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.LibrarianStart.startLibrarian_IsVisibleChanged(System.Object,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Отображает информацию о пользователе
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.LibrarianStart.btnSapport_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Страница связь с разработчиком
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.LibrarianStart.btnEditUser_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Страница для редактирование данных пользователя
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.LibrarianStart.btnMain_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Отображает меню с кнопками 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.LibrarianStart.btnBooks_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Открывает страницу с книгами
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.LibrarianStart.btnBack_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка назад
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.LibrarianStart.btnExitZapic_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Выход из учётной записи
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.LibrarianStart.Border_MouseDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Позволяет двигать окно по экрану
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.LibrarianStart.startFrame_ContentRendered(System.Object,System.EventArgs)">
+            <summary>
+            Логика фрейма
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.LibrarianStart.btnExpand_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка расширить или уменьшить окно
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.LibrarianStart.btnExit_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Закрывает программу
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.LibrarianStart.btnRollUp_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка свернуть окно
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.LibrarianStart.btnSupplier_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Открывает страницу с поставщиками
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.LibrarianStart.btnUserAd_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Открывает страницу со всеми пользователями
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.LibrarianStart.btnVidaca_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Открывает страницу выдачи
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.LibrarianStart.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageLibrarian.MainPageLibrarian">
+            <summary>
+            Логика взаимодействия для MainPageLibrarian.xaml
+            </summary>
+            <summary>
+            MainPageLibrarian
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.MainPageLibrarian.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageLibrarian.Pages.Document.ElectronikDocymentPage">
+            <summary>
+            Логика взаимодействия для ElectronikDocymentPage.xaml
+            </summary>
+            <summary>
+            ElectronikDocymentPage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.Document.ElectronikDocymentPage.DocumentShow">
+            <summary>
+            Выводит документ
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.Document.ElectronikDocymentPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageLibrarian.Pages.EditingPages.EditAdLibrarianPage">
+            <summary>
+            Логика взаимодействия для EditAdLibrarianPage.xaml
+            </summary>
+            <summary>
+            EditAdLibrarianPage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditAdLibrarianPage.Page_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Запоминает логин
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditAdLibrarianPage.btnEditImage_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Открывает проводник с картинками 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditAdLibrarianPage.btnSave_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка сохранить
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditAdLibrarianPage.ImageAd">
+            <summary>
+            Добавить картинку
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditAdLibrarianPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageLibrarian.Pages.EditingPages.EditLibrarianPage">
+            <summary>
+            Логика взаимодействия для EditLibrarianPage.xaml
+            </summary>
+            <summary>
+            EditLibrarianPage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditLibrarianPage.btnSave_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка сохранения
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditLibrarianPage.tBPassword_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Скрывает или отображает текстовое поле с паролем
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditLibrarianPage.pBPassword_PasswordChanged(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Скрывает или отображает PasswordBox
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditLibrarianPage.checkPassword_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Скрывает и отображает пароль
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditLibrarianPage.btnEditImage_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Редактировать фотографию
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditLibrarianPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageLibrarian.Pages.EditingPages.EditOutputPage">
+            <summary>
+            Логика взаимодействия для EditOutputPage.xaml
+            </summary>
+            <summary>
+            EditOutputPage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditOutputPage.Page_IsVisibleChanged(System.Object,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Отключает контролы, при редактировании 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditOutputPage.btnSave_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка сохранить
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditOutputPage.AdHistoriExtradition(System.Windows.Controls.ComboBox,System.Int32,System.Windows.Controls.DatePicker,System.Windows.Controls.DatePicker,System.Windows.Controls.ComboBox,System.Windows.Controls.TextBlock,System.Windows.Controls.TextBlock)">
+            <summary>
+            Добавление данных в историю выдачи
+            </summary>
+            <param name="users"></param>
+            <param name="typeUsers"></param>
+            <param name="dateOfSsue"></param>
+            <param name="endDate"></param>
+            <param name="classes"></param>
+            <param name="book"></param>
+            <param name="namberBook"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditOutputPage.dpDateOkonhania_CalendarOpened(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Дата окончания
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditOutputPage.dpDateVidaha_CalendarOpened(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Дата выдачи
+            </summary>
+            <param name = "sender" ></param >
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditOutputPage.radioAll_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Включает нужный список пользователей
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditOutputPage.cbShoolBoy_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Получение айдишника школьника
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditOutputPage.cbTeachers_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Получение айдишника учителя
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Library.Pages.PageLibrarian.Pages.EditingPages.EditOutputPage.btnSave">
+            <summary>
+            btnSave Name Field
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditOutputPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageLibrarian.Pages.EditingPages.EditSupplierPage">
+            <summary>
+            Логика взаимодействия для EditSupplierPage.xaml
+            </summary>
+            <summary>
+            EditSupplierPage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditSupplierPage.btnSave_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка сохранить
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditSupplierPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageLibrarian.Pages.EditingPages.EditTeachersPage">
+            <summary>
+            Логика взаимодействия для EditUsersPage.xaml
+            </summary>
+            <summary>
+            EditTeachersPage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditTeachersPage.btnEditImage_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Добавить картинку
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditTeachersPage.btnSave_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка сохранить
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditTeachersPage.ImageAd">
+            <summary>
+            Добавить картинку
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditTeachersPage.cbClasses_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Получение айдишника класса
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.EditingPages.EditTeachersPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageLibrarian.Pages.ExtraditionPage">
+            <summary>
+            Логика взаимодействия для ExtraditionPage.xaml
+            </summary>
+            <summary>
+            ExtraditionPage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.ExtraditionPage.ListDate">
+            <summary>
+            Меняет данные, в зависимости какой Item выбран 
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.ExtraditionPage.InfoElseNull">
+            <summary>
+            Если данных нет в лист вью
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.ExtraditionPage.btnAdExtadition_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка добавления выдачи
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.ExtraditionPage.btnDeleteExtradition_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка удалить
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.ExtraditionPage.tbDafaultDate_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Данные по умолчанию если, в строке не введены символы
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.ExtraditionPage.Search(System.Byte)">
+            <summary>
+            Поиск происходит за счёт выбранного элемента в выподающем списке
+            </summary>
+            <param name="param"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.ExtraditionPage.TextPoisck">
+            <summary>
+            Если текущий индекс у текст бокса равен такому значение, то поиск будет идти исключительно
+            по такому индексу у комбо бокса
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.ExtraditionPage.btnPoisk_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка поиска
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.ExtraditionPage.LoadData">
+            <summary>
+            Обновляет данные
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.ExtraditionPage.btnApdate_KeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Срабатывает при нажатии F5
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.ExtraditionPage.btnApdate_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка обновления
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.ExtraditionPage.ScrollViewer_PreviewMouseWheel(System.Object,System.Windows.Input.MouseWheelEventArgs)">
+            <summary>
+            Заставляет прокручивать содержимое, вне зависимости наведена ли мышка на прокрутку или нет
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.ExtraditionPage.btnEditExtradition_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка редактирование выдачи
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.ExtraditionPage.btnBorder_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Скрывает отображенную картинку 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.ExtraditionPage.Image_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Открывает изображение
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.ExtraditionPage.listExtradition_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Получает айдишник книги, и выводит картинку этой книги
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.ExtraditionPage.btnPrint_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка печати
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.ExtraditionPage.btnСancel_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Скрывает выбор местоположении книги 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.ExtraditionPage.BorderColapsed">
+            <summary>
+            Скрывает бордер 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.ExtraditionPage.DeleteBook(System.Byte)">
+            <summary>
+            Удаление выданной книги
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.ExtraditionPage.btnHistory_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Страница истории выдачи
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.ExtraditionPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageLibrarian.Pages.HistoryIssuePage">
+            <summary>
+            Логика взаимодействия для HistoryIssuePage.xaml
+            </summary>
+            <summary>
+            HistoryIssuePage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.HistoryIssuePage.InfoElseNull">
+            <summary>
+            подсчёт количество строк 
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.HistoryIssuePage.ListDate">
+            <summary>
+            Загружает данные в лист вью
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.HistoryIssuePage.TypePoisk(System.Byte)">
+            <summary>
+            Что бы не дублировать поля ...
+            </summary>
+            <param name="param"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.HistoryIssuePage.TextPoisck">
+            <summary>
+            Поиск 
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.HistoryIssuePage.btnPoisk_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка поиска
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.HistoryIssuePage.tbDafaultDate_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Выводит все данные по умолчанию
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.HistoryIssuePage.cmTypeUsers_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Фильтрует данные
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.HistoryIssuePage.ScrollViewer_PreviewMouseWheel(System.Object,System.Windows.Input.MouseWheelEventArgs)">
+            <summary>
+            Заставляет прокручивать содержимое, вне зависимости наведена ли мышка на прокрутку или нет
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.HistoryIssuePage.btnDeleteHistory_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            кнопка удаление
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.HistoryIssuePage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageLibrarian.Pages.SuppliersPage">
+            <summary>
+            Логика взаимодействия для SuppliersPage.xaml
+            </summary>
+            <summary>
+            SuppliersPage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.SuppliersPage.ListDate">
+            <summary>
+            Выводит данные 
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.SuppliersPage.ScrollViewer_PreviewMouseWheel(System.Object,System.Windows.Input.MouseWheelEventArgs)">
+            <summary>
+            Полоса прокрутки у listView
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.SuppliersPage.LoadData">
+            <summary>
+            Обновляет данные
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.SuppliersPage.btnApdate_KeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Срабатывает при нажатии F5
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.SuppliersPage.btnApdate_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка обновления
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.SuppliersPage.TextPoisck">
+            <summary>
+            Если текущий индекс у текст бокса равен такому значение, то поиск будет идти исключительно
+            по такому индексу у комбо бокса
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.SuppliersPage.btnPoisk_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка поиска
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.SuppliersPage.tbDafaultDate_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Отображает по умолчанию все данные
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.SuppliersPage.btnAdSupplier_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка добавления поставщика
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.SuppliersPage.btnEditSlupper_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка редактирование поставщика
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.SuppliersPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageLibrarian.Pages.UserDatePage">
+            <summary>
+            Логика взаимодействия для UserDatePage.xaml
+            </summary>
+            <summary>
+            UserDatePage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserDatePage.ListDate">
+            <summary>
+            Заполняет ListView данными
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserDatePage.pageContent_IsVisibleChanged(System.Object,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Отображает данные, взаимозависимости какой тип пользователя выбрал библиотекарь
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserDatePage.ScrollViewer_PreviewMouseWheel(System.Object,System.Windows.Input.MouseWheelEventArgs)">
+            <summary>
+            Прокручивает ползунок, даже если мышка не наведена на него
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserDatePage.imageAll_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Открывает изображение
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserDatePage.btnBorderCollapsed_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Скрывает отображенную картинку 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserDatePage.btnEditAll_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка редактировать
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserDatePage.btnPoisk_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка поиска
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserDatePage.tbPoisk_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Если текстовое поле пустое, то возвращаются все данные в сходное положение
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserDatePage.btnAdAll_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка добавить
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserDatePage.btnDeleteAll_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка удаления
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserDatePage.pageContent_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Отображает контент
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserDatePage.pageMinysTesters_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Возвращает предыдущие данные у учителей
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param> 
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserDatePage.pagePlusTesters_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Меняет данные вперёд у учителей
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserDatePage.LoadData">
+            <summary>
+            Обновляет данные
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserDatePage.btnApdateAllDate_KeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Кнопка обновления, которая работает при нажатии клавиши F5
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserDatePage.pageMinysSchool_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            листает данные школьников назад
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserDatePage.pagePlusSchool_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            листает данные школьников вперёд
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserDatePage.NumberOfRows(System.Windows.Controls.Primitives.ToggleButton,System.Windows.Controls.Primitives.ToggleButton,System.Windows.Controls.Primitives.ToggleButton,System.Int32)">
+            <summary>
+            Меняет количество строк
+            </summary>
+            <param name="toggleButton1"></param>
+            <param name="toggleButton2"></param>
+            <param name="toggleButton3"></param>
+            <param name="rowСount"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserDatePage.tButtonSchool10_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Меняет  количество строк у школьников 10
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserDatePage.tButtonSchool50_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Меняет  количество строк у школьников 50
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserDatePage.tButtonSchool100_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Меняет  количество строк у школьников 100
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserDatePage.ButtonPlusAndMinys(System.Int32@,System.Windows.Controls.Button,FontAwesome.Sharp.IconImage,System.Int32)">
+            <summary>
+            Отключает в нужный момент кнопку, и меняет переменную для отображения следующей или прошлой страницы
+            </summary>
+            <param name="typePage"></param>
+            <param name="buttonMinys"></param>
+            <param name="iconMinys"></param>
+            <param name="typeButton"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserDatePage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageLibrarian.Pages.UserPage">
+            <summary>
+            Логика взаимодействия для UserPage.xaml
+            </summary>
+            <summary>
+            UserPage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserPage.btnTeachers_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка учителя
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserPage.btnShoolBooy_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка школьники
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserPage.btnLibrarian_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка библиотекари
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageLibrarian.Pages.UserPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PagePrint.VidachaAllBookPrint">
+            <summary>
+            Логика взаимодействия для VidachaAllBookPrint.xaml
+            </summary>
+            <summary>
+            VidachaAllBookPrint
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PagePrint.VidachaAllBookPrint.FormDocument">
+            <summary>
+            Метод печати
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PagePrint.VidachaAllBookPrint.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageStudent.MainPage">
+            <summary>
+            Логика взаимодействия для MainPage.xaml
+            </summary>
+            <summary>
+            MainPage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageStudent.MainPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageStudent.Pages.BookPage">
+            <summary>
+            Логика взаимодействия для BookPage.xaml
+            </summary>
+            <summary>
+            BookPage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.BookPage.ScrollViewer_PreviewMouseWheel(System.Object,System.Windows.Input.MouseWheelEventArgs)">
+            <summary>
+            Заставляет прокручивать содержимое, вне зависимости наведена ли мышка на прокрутку или нет
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.BookPage.LoadData">
+            <summary>
+            Обновляет данные
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.BookPage.DateBook">
+            <summary>
+            Меняет данные, в зависимости какой Item выбран 
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.BookPage.Search(System.Int32,System.String)">
+            <summary>
+            param (если данный параметр = Null или "" то поиск будет искать и такие записи
+            где p.IdBookLocation == null)
+            
+            Id - это поиск исключительно по такому айдишнику который p.IdBookLocation принимает
+            </summary>
+            <param name="Id"></param>
+            <param name="param"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.BookPage.TextPoisck">
+            <summary>
+            Если текущий индекс у текст бокса равен такому значение, то поиск будет идти исключительно
+            по такому индексу у комбо бокса
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.BookPage.btnPoisk_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка поиска
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.BookPage.tbDafaultDate_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Если текстовое поле пустое, то возвращаются все данные в сходное положение
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.BookPage.cmBook_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Меняет данные у ListView
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.BookPage.btnApdate_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка обновления
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.BookPage.btnApdate_KeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Срабатывает при нажатии F5
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.BookPage.btnBookDocument_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Открывает электронный документ
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.BookPage.Page_IsVisibleChanged(System.Object,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Скрывает кнопку в зависимости какая роль
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.BookPage.btnBorder_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Скрывает отображенную картинку 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.BookPage.btnDeleteBook_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка удаления
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.BookPage.imageBook_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Открывает изображение
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.BookPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageStudent.Pages.DocumentElectroinkExtraditionPage">
+            <summary>
+            Логика взаимодействия для DocumentElectroinkExtraditionPage.xaml
+            </summary>
+            <summary>
+            DocumentElectroinkExtraditionPage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.DocumentElectroinkExtraditionPage.Page_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Срабатывает при полной привязке 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.DocumentElectroinkExtraditionPage.btnPrint_CanExecute(System.Object,System.Windows.Input.CanExecuteRoutedEventArgs)">
+            <summary>
+            Отключает кнопку печати
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.DocumentElectroinkExtraditionPage.btnCopy_CanExecute(System.Object,System.Windows.Input.CanExecuteRoutedEventArgs)">
+            <summary>
+            Отключает кнопку копирования
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.DocumentElectroinkExtraditionPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageStudent.Pages.EditUserPage">
+            <summary>
+            Логика взаимодействия для EditUserPage.xaml
+            </summary>
+            <summary>
+            EditUserPage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.EditUserPage.pBPassword_PasswordChanged(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Скрывает или отображает PasswordBox
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.EditUserPage.tBPassword_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Скрывает или отображает текстовое поле с паролем
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.EditUserPage.FocusFalse">
+            <summary>
+            Меняет цвет иконок, также убирает фокус с текстовых полей
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.EditUserPage.checkPassword_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Скрывает и отображает пароль
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.EditUserPage.tBLogin_GotFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Возникает при получении фокуса в tbLogin
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.EditUserPage.pBPassword_GotFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Возникает при получении фокуса в pBPassword
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.EditUserPage.tBPassword_GotFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Возникает при получении фокуса в tBPassword
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.EditUserPage.btnSave_GotFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Возникает при потери фокуса в текстовых полях
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.EditUserPage.Page_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Сбрасывает фокус при нажатии на бордер
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.EditUserPage.pBPasswords_GotFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Возникает при получении фокуса в pBPassword
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.EditUserPage.btnSave_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка сохранения
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.EditUserPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageStudent.Pages.MyBookPage">
+            <summary>
+            Логика взаимодействия для MyBookPage.xaml
+            </summary>
+            <summary>
+            MyBookPage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.MyBookPage.DateBook">
+            <summary>
+            Заполняет данными ListView 
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.MyBookPage.ScrollViewer_PreviewMouseWheel(System.Object,System.Windows.Input.MouseWheelEventArgs)">
+            <summary>
+            Прокручивает ползунок, даже если мышка не наведена на него
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.MyBookPage.TextPoisck">
+            <summary>
+            Поиск данных
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.MyBookPage.btnPoisk_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка поиска
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.MyBookPage.tbPoisk_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Если текстовое поле пустое, возвращает данные в исходное положение 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.MyBookPage.btnDocument_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Открывает электронную версию документа
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.MyBookPage.btnBorder_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Скрывает отображенную картинку 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.MyBookPage.Image_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Открывает изображение
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.MyBookPage.btnAppdate_KeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Кнопка обновления данных 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.Pages.MyBookPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageStudent.StartSchoolboy">
+            <summary>
+            Логика взаимодействия для StartSchoolboy.xaml
+            </summary>
+            <summary>
+            StartSchoolboy
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageStudent.StartSchoolboy.Border_MouseDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Позволяет двигать окно по экрану
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.StartSchoolboy.btnExit_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка выход из программы
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.StartSchoolboy.btnExpand_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка расширить или уменьшить окно
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.StartSchoolboy.btnRollUp_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка свернуть окно
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.StartSchoolboy.btnExitZapic_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Выход из учётной записи
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.StartSchoolboy.startWindow_IsVisibleChanged(System.Object,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Отображает информацию пользователя
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.StartSchoolboy.btnBack_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка назад
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.StartSchoolboy.btnMyBooks_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка открывает мои книги выданные
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.StartSchoolboy.btnMain_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Стартовая страница
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.StartSchoolboy.btnBooks_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Страница книг
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.StartSchoolboy.btnEditUser_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Страница с редактирование логином и паролем
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.StartSchoolboy.btnSapport_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка с помощью
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageStudent.StartSchoolboy.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageTeacher.MainPagesTechers">
+            <summary>
+            Логика взаимодействия для MainPagesTechers.xaml
+            </summary>
+            <summary>
+            MainPagesTechers
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.MainPagesTechers.btnBooks_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Страница книг
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.MainPagesTechers.btnBookMe_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Страница мои книги
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.MainPagesTechers.btnMyClasses_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Страница мои книги
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.MainPagesTechers.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageTeacher.PagesTeachers.Pages.Document.ElectronikDocymentPage">
+            <summary>
+            Логика взаимодействия для ElectronikDocymentPage.xaml
+            </summary>
+            <summary>
+            ElectronikDocymentPage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.Document.ElectronikDocymentPage.DocumentShow">
+            <summary>
+            Выводит документ
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.Document.ElectronikDocymentPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageTeacher.PagesTeachers.Pages.EditBookPage">
+            <summary>
+            Логика взаимодействия для EditBookPage.xaml
+            </summary>
+            <summary>
+            EditBookPage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditBookPage.ApdeteLocationBook">
+            <summary>
+            Меняет местоположение книги
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditBookPage.SqlRequestImageAndDocument(System.Windows.Controls.TextBox,System.Windows.Controls.TextBlock,System.Int32)">
+            <summary>
+            Запрос на добавление картинки и документа
+            </summary>
+            <param name="column"></param>
+            <param name="textBox"></param>
+            <param name="textBlock"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditBookPage.SaveDate">
+            <summary>
+            Сохранение данных
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditBookPage.CheckNamberBook">
+            <summary>
+            Срабатывает при добавлении книги
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditBookPage.btnSave_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка сохранения
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditBookPage.btnEditImage_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка добавление картинки
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditBookPage.btnEditDocument_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка добавление документа
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditBookPage.dpYearPublisher_CalendarOpened(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Установка даты  публикации
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditBookPage.dpDatePostavka_CalendarOpened(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Установка даты  поставки
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditBookPage.Page_IsVisibleChanged(System.Object,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Проверяет какая была кнопка нажата
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditBookPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageTeacher.PagesTeachers.Pages.EditMyCkassesPage">
+            <summary>
+            Логика взаимодействия для EditMyCkassesPage.xaml
+            </summary>
+            <summary>
+            EditMyCkassesPage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditMyCkassesPage.btnEditImage_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка выбора картинки
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditMyCkassesPage.SeveDate">
+            <summary>
+            Сохранение данных
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditMyCkassesPage.btnSave_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка сохранения
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditMyCkassesPage.cbClasses_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Получение айдишника класса
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditMyCkassesPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageTeacher.PagesTeachers.Pages.EditUserPage">
+            <summary>
+            Логика взаимодействия для EditUserPage.xaml
+            </summary>
+            <summary>
+            EditUserPage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditUserPage.Page_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Сбрасывает фокус при нажатии на бордер
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditUserPage.tBLogin_GotFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Возникает при получении фокуса в tbLogin
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditUserPage.pBPassword_GotFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Возникает при получении фокуса в pBPassword
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditUserPage.pBPassword_PasswordChanged(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Скрывает или отображает PasswordBox
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditUserPage.tBPassword_GotFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Возникает при получении фокуса в tBPassword
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditUserPage.tBPassword_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Скрывает или отображает текстовое поле с паролем
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditUserPage.btnSave_GotFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Возникает при потери фокуса в текстовых полях
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditUserPage.btnSave_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка сохранения
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditUserPage.checkPassword_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Скрывает и отображает пароль
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditUserPage.FocusFalse">
+            <summary>
+            Меняет цвет иконок, также убирает фокус с текстовых полей
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditUserPage.tBName_GotFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Меняет цвет иконки у имени
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditUserPage.tBSurName_GotFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Меняет цвет иконки у фамилии
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditUserPage.cBItems_GotFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Меняет цвет иконки у предмета
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.EditUserPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageTeacher.PagesTeachers.Pages.MyBookPage">
+            <summary>
+            Логика взаимодействия для MyBookPage.xaml
+            </summary>
+            <summary>
+            MyBookPage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.MyBookPage.DateBook">
+            <summary>
+            Заполняет данными ListView 
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.MyBookPage.TextPoisck">
+            <summary>
+            Поиск данных
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.MyBookPage.ScrollViewer_PreviewMouseWheel(System.Object,System.Windows.Input.MouseWheelEventArgs)">
+            <summary>
+            Прокручивает ползунок, даже если мышка не наведена на него
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.MyBookPage.btnDocument_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Открывает страницу с книгой
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.MyBookPage.tbPoisk_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Если текстовое поле пустое, возвращает данные в исходное положение 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.MyBookPage.btnPoisk_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка поиска
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.MyBookPage.btnBorder_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Скрывает отображенную картинку 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.MyBookPage.Image_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Открывает изображение
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.MyBookPage.btnAppdate_KeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Кнопка обновления данных 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.MyBookPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageTeacher.PagesTeachers.Pages.MyClassesPage">
+            <summary>
+            Логика взаимодействия для MyClassesPage.xaml
+            </summary>
+            <summary>
+            MyClassesPage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.MyClassesPage.ListDate">
+            <summary>
+            Заполняет данными ListView
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.MyClassesPage.LoadData">
+            <summary>
+            Обновляет данные
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.MyClassesPage.btnAppdate_KeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Кнопка обновления данных 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.MyClassesPage.PoiskDate">
+            <summary>
+            Поиск данных
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.MyClassesPage.tbPoisk_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Если текстовое поле пустое, то возвращаются все данные в сходное положение
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.MyClassesPage.btnPoisk_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка поиска
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.MyClassesPage.ScrollViewer_PreviewMouseWheel(System.Object,System.Windows.Input.MouseWheelEventArgs)">
+            <summary>
+            Прокручивает ползунок, даже если мышка не наведена на него
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.MyClassesPage.imageBook_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Открывает изображение
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.MyClassesPage.btnEditUser_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка редактирования учеников
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.MyClassesPage.btnVidasha_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Страница выдачи класса 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.MyClassesPage.btnBorder_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Скрывает отображенную картинку 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.MyClassesPage.btnAdSchoolBoy_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка добавить учеников
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.MyClassesPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageTeacher.PagesTeachers.Pages.VidahaMyClassesPage">
+            <summary>
+            Логика взаимодействия для VidahaMyClassesPage.xaml
+            </summary>
+            <summary>
+            VidahaMyClassesPage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.VidahaMyClassesPage.btnBorder_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Скрывает отображенную картинку 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.VidahaMyClassesPage.imageBook_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Открывает изображение
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.VidahaMyClassesPage.listBook_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Заполняет переменную айдишником книги, что в дальнейшем позволяет открыть картинку 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.VidahaMyClassesPage.ScrollViewer_PreviewMouseWheel(System.Object,System.Windows.Input.MouseWheelEventArgs)">
+            <summary>
+            Заставляет прокручивать содержимое, вне зависимости наведена ли мышка на прокрутку или нет
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.VidahaMyClassesPage.tbDafaultDate_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Если текстовое поле пустое, то возвращаются все данные в сходное положение
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.VidahaMyClassesPage.TextPoisck">
+            <summary>
+            Если текущий индекс у текст бокса равен такому значение, то поиск будет идти исключительно
+            по такому индексу у комбо бокса
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.VidahaMyClassesPage.btnPoisk_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка поиска
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.VidahaMyClassesPage.LoadData">
+            <summary>
+            Обновляет данные
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.VidahaMyClassesPage.btnAppdate_KeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Кнопка обновления данных 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.PagesTeachers.Pages.VidahaMyClassesPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.PageTeacher.TeacherStart">
+            <summary>
+            Логика взаимодействия для TeacherStart.xaml
+            </summary>
+            <summary>
+            TeacherStart
+            </summary>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.TeacherStart.startWindowTeacher_IsVisibleChanged(System.Object,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Отображает данные пользователя
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.TeacherStart.btnEditUser_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Страница с редактирование логином и паролем
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.TeacherStart.btnMain_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Стартовая страница
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.TeacherStart.btnBooks_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Страница книги
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.TeacherStart.btnMyBooks_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Страница мои книги
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.TeacherStart.btnMyClasses_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Страница мой класс
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.TeacherStart.btnBack_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка назад
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.TeacherStart.btnExitZapic_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Выход из учётной записи
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.TeacherStart.Border_MouseDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Позволяет двигать окно по экрану
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.TeacherStart.btnRollUp_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка свернуть окно
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.TeacherStart.btnExit_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Закрывает программу
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.TeacherStart.btnExpand_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка расширить или уменьшить окно
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.TeacherStart.btnSapport_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка с помощью
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Pages.PageTeacher.TeacherStart.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Pages.SupportPage">
+            <summary>
+            Логика взаимодействия для SupportPage.xaml
+            </summary>
+            <summary>
+            SupportPage
+            </summary>
+        </member>
+        <member name="M:Library.Pages.SupportPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Start.AuthorizationWindow">
+            <summary>
+            Логика взаимодействия для AuthorizationWindow.xaml
+            </summary>
+            <summary>
+            AuthorizationWindow
+            </summary>
+        </member>
+        <member name="M:Library.Start.AuthorizationWindow.Window_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Перемещает окно
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Start.AuthorizationWindow.Border_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Сбрасывает фокус и цвет иконок
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Start.AuthorizationWindow.FocusFalse">
+            <summary>
+            Меняет цвет иконок, также убирает фокус с текстовых полей
+            </summary>
+        </member>
+        <member name="M:Library.Start.AuthorizationWindow.pBPassword_PasswordChanged(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Скрывает или отображает PasswordBox
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Start.AuthorizationWindow.btnExit_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка закрыть
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Start.AuthorizationWindow.checkPassword_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Скрывает и отображает пароль
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Start.AuthorizationWindow.tBPassword_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Скрывает или отображает текстовое поле с паролем
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Start.AuthorizationWindow.btnVhod_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Кнопка войти
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Start.AuthorizationWindow.tBLogin_GotFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Возникает при получении фокуса в tbLogin
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Start.AuthorizationWindow.pBPassword_GotFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Возникает при получении фокуса в pBPassword
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Start.AuthorizationWindow.tBPassword_GotFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Возникает при получении фокуса в tBPassword
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Start.AuthorizationWindow.btnVhod_GotFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Возникает при потери фокуса в текстовых полях
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Library.Start.AuthorizationWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.UserControls.InfoBook">
+            <summary>
+            Логика взаимодействия для InfoBook.xaml
+            </summary>
+            <summary>
+            InfoBook
+            </summary>
+        </member>
+        <member name="P:Library.UserControls.InfoBook.Title">
+            <summary>
+            Принимает описание карточки
+            </summary>
+        </member>
+        <member name="P:Library.UserControls.InfoBook.Number">
+            <summary>
+            Принимает номер карточки
+            </summary>
+        </member>
+        <member name="P:Library.UserControls.InfoBook.Icon">
+            <summary>
+            Принимает иконку карточки
+            </summary>
+        </member>
+        <member name="P:Library.UserControls.InfoBook.Background1">
+            <summary>
+            Принимает цвет карточки карточки
+            </summary>
+        </member>
+        <member name="P:Library.UserControls.InfoBook.Background2">
+            <summary>
+            Принимает цвет карточки карточки2
+            </summary>
+        </member>
+        <member name="P:Library.UserControls.InfoBook.EllipsBackground1">
+            <summary>
+            Принимает цвет эллипса1 
+            </summary>
+        </member>
+        <member name="P:Library.UserControls.InfoBook.EllipsBackground2">
+            <summary>
+            Принимает цвет эллипса2 
+            </summary>
+        </member>
+        <member name="P:Library.UserControls.InfoBook.MarginText">
+            <summary>
+            Принимает отступы текста
+            </summary>
+        </member>
+        <member name="P:Library.UserControls.InfoBook.WidthElips">
+            <summary>
+            Принимает ширину эллипса
+            </summary>
+        </member>
+        <member name="P:Library.UserControls.InfoBook.HeightElips">
+            <summary>
+            Принимает высоту эллипса
+            </summary>
+        </member>
+        <member name="P:Library.UserControls.InfoBook.RectBorder">
+            <summary>
+            Отрисовка  прямоугольника
+            </summary>
+        </member>
+        <member name="P:Library.UserControls.InfoBook.MarginIcon">
+            <summary>
+            Принимает отступы иконки
+            </summary>
+        </member>
+        <member name="P:Library.UserControls.InfoBook.MarginElips">
+            <summary>
+            Принимает отступы эллипс
+            </summary>
+        </member>
+        <member name="P:Library.UserControls.InfoBook.MarginBorder">
+            <summary>
+            Принимает отступы бордера эллипс
+            </summary>
+        </member>
+        <member name="M:Library.UserControls.InfoBook.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.UserControls.UserControlOrder">
+            <summary>
+            Логика взаимодействия для UserControlOrder.xaml
+            </summary>
+            <summary>
+            UserControlOrder
+            </summary>
+        </member>
+        <member name="M:Library.UserControls.UserControlOrder.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Library.Properties.Resources">
+            <summary>
+              Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+            </summary>
+        </member>
+        <member name="P:Library.Properties.Resources.ResourceManager">
+            <summary>
+              Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+            </summary>
+        </member>
+        <member name="P:Library.Properties.Resources.Culture">
+            <summary>
+              Перезаписывает свойство CurrentUICulture текущего потока для всех
+              обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+            </summary>
+        </member>
+        <member name="P:Library.Properties.Resources.Ico">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
+            </summary>
+        </member>
+        <member name="P:Library.Properties.Resources.imageNull">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Library.Properties.Resources.Logo">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Library.Properties.Resources.user">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Library.Properties.Resources.zvyk">
+            <summary>
+              Поиск локализованного ресурса типа System.IO.UnmanagedMemoryStream, аналогичного System.IO.MemoryStream.
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

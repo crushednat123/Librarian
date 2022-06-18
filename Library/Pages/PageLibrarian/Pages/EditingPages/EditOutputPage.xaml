@@ -1,0 +1,198 @@
+﻿<Page x:Class="Library.Pages.PageLibrarian.Pages.EditingPages.EditOutputPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp" 
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EditOutputPage" IsVisibleChanged="Page_IsVisibleChanged">
+
+    <Border CornerRadius="10" Margin="10" Background="White">
+       
+
+        <StackPanel Margin="10 0 10 0" VerticalAlignment="Center">
+            <StackPanel Visibility="Collapsed">
+                <!--Айдишник книги-->
+                <TextBlock x:Name="tbIdBook" Text="{Binding Books.Id}"/>
+                <!--///////-->
+        
+                <TextBlock Text="{Binding Books.NameBook}" x:Name="tbNameBook"/>
+                <TextBlock Text="{Binding Books.NamberBook}" x:Name="tbNamberBook"/>
+            </StackPanel>
+           
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                
+
+                <Grid Grid.ColumnSpan="2" Grid.Row="0">
+                    <StackPanel>
+                        <Grid>
+                            <TextBlock Text="Логин" x:Name="textBlockText" HorizontalAlignment="Center" Margin="0 -20 0 0"
+                                       Panel.ZIndex="1" Foreground="Gray"
+                                       VerticalAlignment="Center"/>
+                            <TextBox VerticalAlignment="Center" x:Name="tbLoginCheckUsers" Style="{StaticResource chekLoginBox}"
+                                 Width="300" 
+                                 Grid.ColumnSpan="2" Margin="0 0 0 20"
+                                 HorizontalAlignment="Center"/>
+                            
+                        </Grid>
+                        <StackPanel x:Name="school">
+                            <!--Ученик-->
+                            <ComboBox Margin="5 10 4 0"  Name="cbShoolBoy" 
+                                        IsEditable="True"
+                                        SelectionChanged="cbShoolBoy_SelectionChanged"
+                                        SelectedItem="{Binding SchoolBoy}"
+                                        DisplayMemberPath="FullName">
+
+                                <ComboBox.ToolTip>
+                                    <StackPanel>
+                                        <TextBlock Width="auto" Margin="10 0 10 0" Text="Ученик"/>
+                                    </StackPanel>
+                                </ComboBox.ToolTip>
+                            </ComboBox>
+
+
+                            <fa:IconImage Panel.ZIndex="1"
+                                Icon="UserAlt"
+                                HorizontalAlignment="Left"
+                                Foreground="Gray" Margin="15 -25 0 0"/>
+                            <!--/////////-->
+                        </StackPanel>
+
+                        <StackPanel x:Name="teachers">
+                            <!--Учитель-->
+                            <ComboBox Margin="5 10 4 0" Width="auto"  IsEditable="True" 
+                                    SelectionChanged="cbTeachers_SelectionChanged"
+                                    SelectedItem="{Binding Teachers}"                              
+                                    DisplayMemberPath="FullName"
+                                    Name="cbTeachers">
+
+                                <ComboBox.ToolTip>
+                                    <TextBlock Width="auto" Margin="10 0 10 0" Text="Учитель"/>
+                                </ComboBox.ToolTip>
+                            </ComboBox>
+
+                            <fa:IconImage Panel.ZIndex="1"
+                                Icon="UserAlt"
+                                HorizontalAlignment="Left"
+                                Foreground="Gray" Margin="15 -25 0 0"/>
+                            <!--//////-->
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="10 10 0 0">
+                            <RadioButton Margin="0 0 0 0" x:Name="radioSchool" Click="radioAll_Click" Content="Ученик"/>
+                            <RadioButton Margin="20 0 0 0" x:Name="radioTeachers" Click="radioAll_Click" Content="Учитель"/>
+                        </StackPanel>
+
+
+                    </StackPanel>
+                </Grid>
+
+
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <StackPanel  x:Name="sPclass">
+                        <!-- Класс-->
+                        <ComboBox Name="cbClass" IsEditable="True" 
+                                            SelectedItem="{Binding Classes}"
+                                            DisplayMemberPath="NamberClasses" Margin="5 10 4 0">
+                            <ComboBox.ToolTip>
+                                <TextBlock Width="auto" Margin="10 0 10 0" Text="Класс"/>
+                            </ComboBox.ToolTip>
+
+                        </ComboBox>
+
+                        <fa:IconImage Panel.ZIndex="1"
+                                        Icon="Users"
+                                        HorizontalAlignment="Left"
+                                        Foreground="Gray" Margin="15 -25 0 0"/>
+                        <!---->
+
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <StackPanel>
+                        <!--Книга-->
+                        <ComboBox Margin="5 10 4 0" IsEditable="True"
+                          
+                                      SelectedItem="{Binding Books}"                              
+                                      DisplayMemberPath="NameBookAndNamber"
+                                      Name="cbBook">
+
+                            <ComboBox.ToolTip>
+                                <TextBlock Width="auto" Margin="10 0 10 0" Text="Книга"/>
+                            </ComboBox.ToolTip>
+                        </ComboBox>
+
+                        <fa:IconImage Panel.ZIndex="1"
+                                          Icon="Book"
+                                          HorizontalAlignment="Left"
+                                          Foreground="Gray" Margin="15 -25 0 0"/>
+                        <!---->
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="2" Grid.Column="0">
+                    <StackPanel>
+                        <!--Дата выдачи-->
+                        <DatePicker Margin="5 10 4 0" Width="auto"
+                                                          x:Name="dpDateVidaha" CalendarOpened="dpDateVidaha_CalendarOpened"
+                                                          SelectedDate="{Binding DateOfISsue, StringFormat=dd.MM.yyyy}">
+                            <DatePicker.ToolTip>
+                                <TextBlock Width="auto" Margin="10 0 10 0" Text="Дата выдачи"/>
+                            </DatePicker.ToolTip>
+                        </DatePicker>
+
+                        <fa:IconImage x:Name="iconCalendar" Panel.ZIndex="1" Icon="CalendarAlt"
+                                          HorizontalAlignment="Left"
+                                          Foreground="Gray" Margin="15 -25 0 0"/>
+                        <!--/-->
+                    </StackPanel>
+                </Grid>
+
+
+                <Grid Grid.Row="2" Grid.Column="1">
+                    <StackPanel>
+                        <!--Дата окончания-->
+                        <DatePicker Margin="5 10 4 0"  
+                                    x:Name="dpDateOkonhania" CalendarOpened="dpDateOkonhania_CalendarOpened"
+                                            
+                                    SelectedDate="{Binding EndDate, StringFormat=dd.MM.yyyy}">
+                            <DatePicker.ToolTip>
+                                <TextBlock Width="auto" Margin="10 0 10 0" Text="Дата окончания"/>
+                            </DatePicker.ToolTip>
+                        </DatePicker>
+
+                        <fa:IconImage  Panel.ZIndex="1" Icon="CalendarAlt"
+                                               HorizontalAlignment="Left"
+                                               Foreground="Gray" Margin="15 -25 0 0"/>
+                        <!--/-->
+
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="3" Grid.ColumnSpan="2">
+                    <Button Width="auto" Margin="5 10 5 0" x:FieldModifier="public"
+                    Content="Сохранить" x:Name="btnSave"
+                    Click="btnSave_Click"/>
+                </Grid>
+            </Grid>
+
+        </StackPanel>
+    </Border>
+</Page>
+

@@ -1,0 +1,89 @@
+﻿<Page x:Class="Library.Pages.PageLibrarian.MainPageLibrarian"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Library.Pages.PageLibrarian"
+      mc:Ignorable="d" 
+      xmlns:uc="clr-namespace:Library.UserControls"     
+      Title="MainPageTeacher">
+
+
+    <WrapPanel HorizontalAlignment="Center"
+               VerticalAlignment="Center" Margin="24 0 0 0">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Column="0" Grid.Row="0">
+                <Button x:Name="btnBooks" Width="355" Style="{StaticResource btnContentMenu}"
+                            Click="btnBooks_Click" Margin="0 0 30 0"                   
+                            Height="150">
+                    <uc:InfoBook   Style="{StaticResource styleLibrarian}"                   
+                                Number="Книги"
+                                Icon="BookOpen"                    
+                                Background1="#827bff"
+                                Background2="#d9b5ff"
+                                EllipsBackground1="#b298fd"
+                                EllipsBackground2="#e4bbff" />
+                </Button>
+            </Grid>
+          
+            <Grid Grid.Column="1" Grid.Row="0">
+                <Button x:Name="btnVidahaShool" Click="btnVidahaShool_Click" Width="355"  Margin="0 0 30 0"      
+                    Style="{StaticResource btnContentMenu}"
+                      
+                        Height="150" >
+                    <uc:InfoBook Style="{StaticResource styleLibrarian}"         
+                                Number="Выдача"
+                                Icon="Inbox"                        
+                                Background1="#9932CC"
+                                Background2="#DDA0DD"
+                                EllipsBackground1="#D8BFD8"
+                                EllipsBackground2="#EE82EE"/>
+                </Button>
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="0">
+
+
+                <Button x:Name="btnUserLogin" Width="355"  Style="{StaticResource btnContentMenu}"
+                        Click="btnUserLogin_Click" Margin="0 0 30 0"      
+                        Height="150" >
+                    <uc:InfoBook Style="{StaticResource styleLibrarian}"         
+                                    Number="Пользователи"
+                                    Icon="Users"                        
+                                    Background1="#1E90FF"
+                                    Background2="#4169E1"
+                                    EllipsBackground1="#00BFFF"
+                                    EllipsBackground2="#1E90FF"/>
+                </Button>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="1">
+
+                <Button x:Name="btnPostovhik" Width="355"  Style="{StaticResource btnContentMenu}"
+                        Click="btnPostovhik_Click" Margin="0 0 30 0"      
+                        Height="150" >
+                    <uc:InfoBook Style="{StaticResource styleLibrarian}"         
+                                    Number="Поставщики"
+                                    Icon="Boxes"                        
+                                    Background1="DarkCyan"
+                                    Background2="#20B2AA"
+                                    EllipsBackground1="#20B2AA"
+                                    EllipsBackground2="#20B2AA"/>
+                </Button>
+            </Grid>
+
+
+       </Grid>
+    </WrapPanel>
+</Page>

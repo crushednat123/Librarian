@@ -1,0 +1,52 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--Боковая панель-->
+    <Color x:Key="DarkBlueTopColor">#223266</Color>
+    <Color x:Key="DarkBlueBottomColor">#27396b</Color>
+
+    <!--Центральный фон-->
+    <Color x:Key="DarkBlueTopRightColor">#41518f</Color>
+    <Color x:Key="DarkBlueBottomLeftColor">#2c386c</Color>
+
+    <!--Окошко для картинки-->
+    <Color x:Key="TopFrame">#7f7cf1</Color>
+    <Color x:Key="BottomFrame">#d3b7ff</Color>
+
+    <!--Цвет сокращённых букв текста пользователя-->
+    <SolidColorBrush x:Key="TextColor" Color="#ffffff" />
+
+    <!--Цвет текста пользователя-->
+    <SolidColorBrush x:Key="TextColorNameSurname" Color="#c2cfff" />
+
+    <!--Цвет номер версии программы-->
+    <SolidColorBrush x:Key="TextColorVersionNumber" Color="#7788bf" />
+
+    <!--Разделитель в левом бордере-->
+    <SolidColorBrush x:Key="ColorLeftSeparatorBorder" Color="#46558a"/>
+
+
+    <!--Цвета в главном меню-->
+    <SolidColorBrush x:Key="BtnMenuForeground" Color="#707db2"/>
+    <SolidColorBrush x:Key="BtnMenuTriggerForeground" Color="#bccaf1"/>
+    <Color x:Key="BtnMenuGradient1">#31407b</Color>
+    <Color x:Key="BtnMenuGradient2">#495385</Color>
+    <SolidColorBrush x:Key="BtnMenuBorderBrush" Color="#a5a1f5"></SolidColorBrush>
+
+
+    <!--Цвет текста в кнопках (верхнее меню)-->
+    <SolidColorBrush x:Key="TextColorTopMenu" Color="#9eabe2" />
+
+
+    <!--Цвет кнопки верхнее меню-->
+    <SolidColorBrush x:Key="BtnMenuTop" Color="#5b60c4"/>
+
+
+    <!--Заголовок текста-->
+    <SolidColorBrush x:Key="TextColorTitle" Color="#ccd7ff" />
+
+
+    <!--Цвет иконки в секции 2-->
+    <SolidColorBrush Color="#7b82ea"  x:Key="ColorIconCekcia2"/>
+
+</ResourceDictionary>

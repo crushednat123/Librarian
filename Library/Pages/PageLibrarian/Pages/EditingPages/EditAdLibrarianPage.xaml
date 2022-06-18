@@ -1,0 +1,297 @@
+﻿<Page x:Class="Library.Pages.PageLibrarian.Pages.EditingPages.EditAdLibrarianPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp" 
+      mc:Ignorable="d" 
+      xmlns:mask="http://schemas.xceed.com/wpf/xaml/toolkit"
+      d:DesignHeight="450" d:DesignWidth="800" 
+      Title="EditAdLabrarianPage" Loaded="Page_Loaded">
+
+    <Border
+        Margin="25 10 25 20"
+        Background="White" x:Name="border" CornerRadius="10" Focusable="True"            
+        FocusVisualStyle="{x:Null}" >
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" Margin="0 -40 0 0">
+                <!-- Айдишник Учителя-->
+                <TextBlock Text="{Binding Librarian.Id}" x:Name="textBlockIdUser" Visibility="Collapsed"/>
+                <!-- -->
+
+                <StackPanel VerticalAlignment="Center">
+                    <!--Фамилия-->
+                    <TextBox TabIndex="1" Text="{Binding Librarian.SurName}" Style="{StaticResource TextBox}"
+                            MaxLength="30"                    
+                            Margin="10 10 0 0" Width="auto"  Name="tBSurName">
+
+                        <TextBox.ToolTip>
+                            <TextBlock Width="65" Margin="15 0 0 0" Text="Фамилия"/>
+                        </TextBox.ToolTip>
+                    </TextBox>
+
+                    <fa:IconImage x:Name="iconSurName" Panel.ZIndex="1" Icon="UserEdit"
+                          HorizontalAlignment="Left"
+                          Foreground="Gray" Margin="20 -30 0 0"/>
+
+                    <TextBlock x:Name="PlaceholderSurName" IsHitTestVisible="False"
+                           TextWrapping="Wrap"                      
+                           Text="Фамилия"
+                           Margin="43 -30 0 0"
+                               
+                           VerticalAlignment="Center"                       
+                           Foreground="DarkGray"
+                           HorizontalAlignment="Left">
+
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                                <Setter Property="FontFamily"  Value="Comic Sans MS"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=tBSurName}" Value="">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+
+                    <!--/Фамилия-->
+
+
+                    <!--Имя и Отчество-->
+                    <TextBox TabIndex="2" Text="{Binding Librarian.Name}" Style="{StaticResource TextBox}"
+                            MaxLength="30"                    
+                            Margin="10 10 0 0" Width="auto"  Name="tBName">
+
+                        <TextBox.ToolTip>
+                            <TextBlock Width="auto" Margin="10 0 10 0" Text="Имя и отчество"/>
+                        </TextBox.ToolTip>
+                    </TextBox>
+
+                    <fa:IconImage  Panel.ZIndex="1" Icon="AddressCard"
+                          HorizontalAlignment="Left"
+                          Foreground="Gray" Margin="20 -30 0 0"/>
+
+                    <TextBlock x:Name="PlaceholderName" IsHitTestVisible="False"
+                           TextWrapping="Wrap"                      
+                           Text="Имя и отчество"
+                           Margin="43 -30 0 0"
+                               
+                           VerticalAlignment="Center"                       
+                           Foreground="DarkGray"
+                           HorizontalAlignment="Left">
+
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                                <Setter Property="FontFamily"  Value="Comic Sans MS"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=tBName}" Value="">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+
+                    <!--/Имя и Отчество-->
+
+
+                    <!--Адрес-->
+                    <TextBox TabIndex="3" Text="{Binding Librarian.Address}" Style="{StaticResource TextBox}"
+                             MaxLength="50"
+                  
+                     Margin="10 10 0 0" Width="auto"  Name="tBAdres">
+
+                        <TextBox.ToolTip>
+                            <TextBlock Width="45" Margin="10 0 0 0" Text="Адрес"/>
+                        </TextBox.ToolTip>
+                    </TextBox>
+
+
+
+                    <fa:IconImage x:Name="iconAdres" Panel.ZIndex="1" Icon="MapMarkerAlt"
+                          HorizontalAlignment="Left"
+                          Foreground="Gray" Margin="20 -30 0 0"/>
+
+                    <TextBlock x:Name="PlaceholderAdres" IsHitTestVisible="False"
+                           TextWrapping="Wrap"                      
+                           Text="Адрес"
+                           Margin="43 -30 0 0"
+                               
+                           VerticalAlignment="Center"                       
+                           Foreground="DarkGray"
+                           HorizontalAlignment="Left">
+
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                                <Setter Property="FontFamily"  Value="Comic Sans MS"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=tBAdres}" Value="">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+
+                    <!--/Адрес-->                   
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="1" Margin="0 0 10 0">
+
+                <StackPanel VerticalAlignment="Center">
+                    <!--Логин-->
+                    <TextBox TabIndex="5" Text="{Binding Login}" Style="{StaticResource TextBox}"                                        
+                         Width="auto"  Margin="10 10 0 0" Name="tBLogin">
+
+                        <TextBox.ToolTip>
+                            <TextBlock Width="50" Margin="15 0 0 0" Text="Логин"/>
+                        </TextBox.ToolTip>
+                    </TextBox>
+
+                    <fa:IconImage x:Name="iconLogin" Icon="User"
+                              HorizontalAlignment="Left"
+                              Foreground="Gray" Margin="20 -30 0 0"/>
+
+                    <TextBlock x:Name="Placeholder" IsHitTestVisible="False"
+                               TextWrapping="Wrap"                      
+                               Text="Логин"
+                              Margin="43 -30 0 0"
+                               
+                               VerticalAlignment="Center"                       
+                               Foreground="DarkGray"
+                               HorizontalAlignment="Left">
+
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                                <Setter Property="FontFamily"  Value="Comic Sans MS"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=tBLogin}" Value="">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                    <!--/-->
+
+                    <!--Пароль-->
+                    <TextBox TabIndex="6"  x:Name="tBPassword" Style="{StaticResource TextBox}" Text="{Binding Password}"
+                             Margin="10 10 0 0"  Width="auto">
+                        <TextBox.ToolTip>
+                            <TextBlock Width="60" Margin="13 0 0 0" Text="Пароль"/>
+                        </TextBox.ToolTip>
+                    </TextBox>
+
+                    <fa:IconImage x:Name="iconPassword" Icon="Lock" 
+                          HorizontalAlignment="Left"
+                          Foreground="Gray" Margin="20 -30 0 0"/>
+
+                    <TextBlock x:Name="textBlockPassword"                              
+                           Text="Пароль"
+                           Margin="43 -30 0 0"
+                           VerticalAlignment="Center"                       
+                           Foreground="DarkGray"
+                           HorizontalAlignment="Left">
+
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                                <Setter Property="FontFamily"  Value="Comic Sans MS"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=tBPassword}" Value="">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                    <!--/-->
+                   
+                    <!--Телефон-->                   
+                    <mask:MaskedTextBox TabIndex="7"  Text="{Binding Librarian.Telephone}" Style="{StaticResource TextBox}"
+                                        
+                        MaxLength="18" Mask="+7 (000)-000-00-00"     
+                        Margin="10 10 0 0" Width="auto"  Name="tBPhone">
+                        <TextBox.ToolTip>
+                            <TextBlock Width="65" Margin="10 0 0 0" Text="Телефон"/>
+                        </TextBox.ToolTip>
+                    </mask:MaskedTextBox>
+
+                 
+                    <fa:IconImage x:Name="iconPhone" Icon="Whatsapp" 
+                          HorizontalAlignment="Left"
+                          Foreground="Gray" Margin="20 -30 0 0"/>
+                    <!--/Телефон-->
+                                        
+                    <!--Картинка -->
+                    <TextBlock x:Name="tbImageCheck" Text="{Binding Librarian.Img}"  Visibility="Collapsed"/>
+                    <TextBlock x:Name="tbImage" Visibility="Collapsed" Style="{StaticResource tbImageCheck}"/>
+
+
+                    <TextBox Margin="10 10 0 0" IsReadOnly="True"  TabIndex="8" x:Name="textBoxImage"  Width="auto" Style="{StaticResource TextBoxImage}"
+                     
+                                Text="{Binding ElementName=tbImage, Path=Text}">
+                        <TextBox.ToolTip>
+                            <TextBlock Width="60" Margin="10 0 0 0" Text="Картинка"/>
+                        </TextBox.ToolTip>
+                    </TextBox>
+                    <fa:IconImage x:Name="iconImage" Panel.ZIndex="1" Icon="Images"
+                                    HorizontalAlignment="Left"
+                                    Foreground="Gray" Margin="20 -30 0 0"/>
+
+                    <Button x:Name="btnEditImage"
+                                    Focusable="False" Click="btnEditImage_Click"                                                             
+                                    Margin="0 -28 5 0" Style="{StaticResource btnEditFale}">
+
+                        <fa:IconImage Icon="Ad" Height="16" Style="{StaticResource fa:IconImageTopButton}"/>
+                        <Button.ToolTip >
+                            <ToolTip Width="130">
+                                <TextBlock Text="Изменить картинку"/>
+                            </ToolTip>
+                        </Button.ToolTip>
+                    </Button>
+                    <!--/-->                     
+                </StackPanel>
+
+            </Grid>
+            <Button TabIndex="9" Margin="10 0 10 -250" Grid.ColumnSpan="2"  Content="Сохранить" x:Name="btnSave"
+                                            Click="btnSave_Click"
+                                            Width="auto"/>
+
+            <Grid Grid.Row="1" Margin="10 0 0 0">
+
+                <StackPanel  Orientation="Horizontal">
+                    <TextBlock Text="Картинка"/>
+                    <fa:IconImage x:Name="iconChek" Style="{StaticResource iconImageChekImage}"  Icon="CheckCircle"                             
+                               Margin="13 -40 0 0"/>
+                </StackPanel>
+            </Grid>
+
+
+        </Grid>
+
+
+    </Border>
+</Page>

@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:uc="clr-namespace:Library.UserControls"     
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style TargetType="uc:InfoBook">
+        <Setter Property="MarginText" Value="-17 0 0 37"/>
+        <Setter Property="RectBorder" Value="0 0 451 140"/>
+        <Setter Property="WidthElips" Value="230"/>
+        <Setter Property="MarginIcon" Value="0 0 175 25"/>
+        <Setter Property="MarginElips" Value="0 -90 90 0"/>
+        <Setter Property="HeightElips" Value="230"/>
+    </Style>
+
+    <Style TargetType="uc:InfoBook" x:Key="styleLibrarian">
+        <Setter Property="MarginText" Value="-17 0 0 47"/>
+        <Setter Property="RectBorder" Value="0 0 351 120"/>
+        <Setter Property="WidthElips" Value="230"/>
+        <Setter Property="MarginElips" Value="0 -90 130 0"/>
+        <Setter Property="MarginIcon" Value="0 0 275 38"/>
+        <Setter Property="HeightElips" Value="230"/>
+    </Style>
+</ResourceDictionary>

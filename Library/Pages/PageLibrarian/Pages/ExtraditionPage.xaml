@@ -1,0 +1,470 @@
+﻿<Page x:Class="Library.Pages.PageLibrarian.Pages.ExtraditionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Library.Pages.PageLibrarian.Pages"
+   xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp" 
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ExtraditionPage" IsVisibleChanged="Page_IsVisibleChanged">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Button x:Name="btnAdExtadition" HorizontalAlignment="Left"
+                 Panel.ZIndex="1"
+                 Click="btnAdExtadition_Click"
+                 Focusable="False"                                                             
+                 Margin="10 30 0 0" Style="{StaticResource btnChekTecher}">
+                <StackPanel Orientation="Horizontal">
+                    <fa:IconImage Icon="Ad" Margin="0" Height="20" Style="{StaticResource fa:IconImage}" />
+
+                    <TextBlock Text="Добавить" Style="{StaticResource menuButtonText}"/>
+                </StackPanel>
+            </Button>
+
+            <Button x:Name="btnHistory" HorizontalAlignment="Left"
+                  Panel.ZIndex="1"
+                  Click="btnHistory_Click"
+                 Focusable="False"                                                             
+                 Margin="160 30 0 0" Style="{StaticResource btnChekTecher}">
+                <StackPanel Orientation="Horizontal">
+                    <fa:IconImage Icon="History" Margin="0" Height="20" Style="{StaticResource fa:IconImage}" />
+
+                    <TextBlock Text="История выдачи" Style="{StaticResource menuButtonText}"/>
+                </StackPanel>
+            </Button>
+            
+            <Button x:Name="btnPrint" HorizontalAlignment="Center"
+                  Panel.ZIndex="1"
+                  Click="btnPrint_Click"
+                 Focusable="False"                                                             
+                 Margin="10 30 0 0" Style="{StaticResource btnChekTecher}">
+                <StackPanel Orientation="Horizontal">
+                    <fa:IconImage Icon="Print" Margin="0" Height="20" Style="{StaticResource fa:IconImage}" />
+
+                    <TextBlock Text="Печать" Style="{StaticResource menuButtonText}"/>
+                </StackPanel>
+            </Button>
+
+            <Button x:Name="btnDeleteExtradition"  HorizontalAlignment="Right"
+                 Click="btnDeleteExtradition_Click"      
+                 Focusable="False"                                                             
+                 Margin="0 30 20 0" Style="{StaticResource btnChekTecher}">
+                <StackPanel Orientation="Horizontal">
+                    <fa:IconImage Icon="TrashAlt" Margin="0" Height="20" Style="{StaticResource fa:IconImage}" />
+
+                    <TextBlock  Text="Удалить" Style="{StaticResource menuButtonText}"/>
+                </StackPanel>
+            </Button>
+            <TextBlock  Text="Выдача" Margin="10 -22 0 0" Style="{StaticResource TextTitle}"/>
+
+            <WrapPanel Orientation="Horizontal"                   
+                       HorizontalAlignment="Stretch"
+                       VerticalAlignment="Top"
+                       Width="auto"
+                       Margin="180 0 0 0"
+                       Height="auto">
+
+                <TextBox Style="{StaticResource tbPoiskStyle}"
+                         x:Name="tbDafaultDate"
+                         TextChanged="tbDafaultDate_TextChanged" 
+                         VerticalAlignment="Top"
+                         Margin="0 0 0 0"                         
+                         Width="300" HorizontalAlignment="Left">
+
+                    <TextBox.ToolTip>
+                        <ToolTip Height="50">
+                            <StackPanel>
+                                <TextBlock  Width="auto"
+                                        Margin="10 0 10 0" Text="Названии книги, год издания, автор книги,"/>
+
+                                <TextBlock Width="auto"
+                                        Margin="10 0 10 0" Text="дата выдачи, дата окончания, по ФИО"/>
+                            </StackPanel>
+                        </ToolTip>
+                    </TextBox.ToolTip>
+                </TextBox>
+
+                <TextBlock  x:Name="Placeholder" IsHitTestVisible="False" 
+                            TextWrapping="Wrap"                      
+                            Text="Поиск:"
+                            FontWeight="Bold"                                               
+                            VerticalAlignment="Stretch"                       
+                            Foreground="DimGray"
+                            Margin="-294 6 0 0"
+                            HorizontalAlignment="Left">
+
+
+                    <TextBlock.Style>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                            <Setter Property="FontFamily"  Value="Comic Sans MS"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Text, ElementName=tbDafaultDate}" Value="">
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+
+
+                <Button Style="{StaticResource btnCrossAndRollUp}"
+                        Panel.ZIndex="1" Margin="-62 5 0 0"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left"
+                        x:Name="btnPoisk" Click="btnPoisk_Click" IsDefault="True">
+
+                    <fa:IconImage Style="{StaticResource poiskIcon}"/>
+                    <Button.ToolTip>
+                        <ToolTip Width="270" Height="60" Style="{StaticResource ToolTipPoisk}"/>
+                    </Button.ToolTip>
+
+
+                </Button>
+
+                <StackPanel Orientation="Horizontal">
+
+                    <ComboBox x:Name="cbChekDate" SelectionChanged="cbChekDate_SelectionChanged"
+                                Width="200" Height="30">
+                        <TextBlock Text="Все    " Width="auto" Margin="10 0 0 0" Panel.ZIndex="1"/>
+                        <TextBlock Text="  Ученики"/>
+                        <TextBlock Text="  Учителя"/>
+                        
+                    </ComboBox>
+                    <fa:IconImage x:Name="iconItems" Panel.ZIndex="1" Icon="Users"
+                                HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="22"
+                                Foreground="Gray" Margin="-190 8 0 0"/>
+
+
+                    <Button Style="{StaticResource btnApdate}"
+                                Margin="10 0 0 0" Height="30"
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Left"
+                                x:Name="btnApdate"
+                                Focusable="False"
+                                KeyDown="btnApdate_KeyDown"
+                                Click="btnApdate_Click">
+
+                        <fa:IconImage Foreground="White" Icon="RedoAlt"/>
+                        <Button.ToolTip>
+                            <ToolTip Width="105" Height="40" Style="{StaticResource ToolTipApdate}"/>
+                        </Button.ToolTip>
+
+                    </Button>
+
+                </StackPanel>
+            </WrapPanel>
+        </Grid>
+        <Grid Grid.Row="1" >
+
+            <StackPanel  Visibility="Collapsed" Panel.ZIndex="1"
+                                          HorizontalAlignment="Center" 
+                                          VerticalAlignment="Center"
+                                          Orientation="Horizontal"                                                
+                                          x:Name="tbInfo">
+
+                <fa:IconImage Icon="Frown" Foreground="#5b60c4" Height="70" Width="70"/>
+                <TextBlock Text="Ничего не найдено" Margin="20 0 0 0" FontSize="26" Style="{StaticResource menuButtonText}"/>
+            </StackPanel>
+            <Border CornerRadius="10" Margin="10 0 20 20">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
+                        <GradientStop Color="#4169E1" Offset="0"/>
+                        <GradientStop Color="#ADD8E6" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <ScrollViewer PreviewMouseWheel="ScrollViewer_PreviewMouseWheel"
+                              HorizontalScrollBarVisibility="Auto" 
+                              VerticalScrollBarVisibility="Auto">
+
+                    <StackPanel Margin="10 10 10 0">
+
+                        <ListView  x:Name="listExtradition"  
+                                   FocusVisualStyle="{x:Null}"
+                                   
+                                   SelectionChanged="listExtradition_SelectionChanged"
+                                   BorderThickness="0" Background="Transparent"
+                                   d:ItemsSource="{d:SampleData ItemCount=5}">
+
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Width="auto">
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+
+                                        </Grid.ColumnDefinitions>
+
+                                        <Grid Grid.Column="0">
+                                            <Border 
+                                                Canvas.Top="30"
+                                                Width="100"                                
+                                                Margin="0 5 0 5"
+                                                HorizontalAlignment="Left"       
+                                                BorderBrush="Blue"
+                                                BorderThickness="1"
+                                                CornerRadius="10">
+
+                                                <Border.Effect>
+                                                    <DropShadowEffect BlurRadius="20"
+                                                        Opacity=".5"
+                                                        ShadowDepth="1" />
+                                                </Border.Effect>
+
+                                                <Border Name="ReceiverColor"
+                                                BorderBrush="#FF96B2E4"
+                                                BorderThickness="2"
+                                                CornerRadius="10">
+                                                    <Grid>
+                                                        <Border Name="Mask"
+                                                    Background="White"
+                                                    BorderBrush="#FF3B5998"
+                                                    BorderThickness="0"
+                                                    CornerRadius="10">
+                                                        </Border>
+                                                        <StackPanel>
+                                                            <Image Stretch="Fill" Margin="5" MouseLeftButtonDown="Image_MouseLeftButtonDown">
+                                                                <Image.Source>
+                                                                    <Binding Path="Books.Image">
+                                                                        <Binding.TargetNullValue>
+                                                                            <ImageSource>
+                                                                                /Resources/imageNull.png
+                                                                            </ImageSource>
+
+                                                                        </Binding.TargetNullValue>
+
+                                                                    </Binding>
+                                                                </Image.Source>
+                                                                <Image.ToolTip>
+                                                                    <TextBlock Margin="10 0 10 0" Text="Открыть картинку"/>
+                                                                </Image.ToolTip>
+                                                            </Image>
+                                                            <StackPanel.OpacityMask>
+                                                                <VisualBrush Visual="{Binding ElementName=Mask}" />
+                                                            </StackPanel.OpacityMask>
+                                                        </StackPanel>
+                                                    </Grid>
+                                                </Border>
+                                            </Border>
+
+                                        </Grid>
+
+                                        <Grid Grid.Column="1" HorizontalAlignment="Left" Margin="20 0 0 0">
+                                            <StackPanel>
+                                                                                                
+                                                <TextBlock Text="{Binding Books.NameBook}" FontWeight="Bold" Margin="0 0 0 10"
+                                                                   Style="{StaticResource tbListView}" FontSize="20"/>
+
+                                                <TextBlock Text="{Binding Books.YearOfPublication, StringFormat={}Год издания: {0:dd.MM.yyyy}}"
+                                                                   Margin="0 10 0 0"  Style="{StaticResource tbListView}"/>
+
+                                                <TextBlock Text="{Binding  Books.AuthorOfThebook, StringFormat={}Автор книги: {0}}" 
+                                                                   Margin="0 10 0 0"  Style="{StaticResource tbListView}"/>
+                                               
+                                            </StackPanel>
+                                       </Grid>
+
+                                        <Grid Grid.Column="2" Margin="90 0 0 0">
+                                            <StackPanel>
+                                                <TextBlock Style="{StaticResource tbListView}"
+                                                           Margin="10" FontWeight="Bold"
+                                                           Text="{Binding FullName}">
+                                                    <TextBlock.ToolTip>
+                                                        <TextBlock Margin="10 0 10 0" Text="Книга выдана"/>
+                                                    </TextBlock.ToolTip>
+                                                            </TextBlock>
+
+                                                <TextBlock Text="{Binding  DateOfISsue, StringFormat={}Дата выдачи: {0:dd.MM.yyyy}}" 
+                                                                   Margin="0 10 0 0"  Style="{StaticResource tbListView}"/>
+
+                                                <TextBlock Text="{Binding  EndDate, StringFormat={}Окончание выдачи: {0:dd.MM.yyyy}}"
+                                                                   Margin="0 10 0 30"  Style="{StaticResource tbListView}"/>
+                                                <TextBlock Style="{StaticResource tbListView}"
+                                                           HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 10 0"
+                                                           Text="{Binding Books.NamberBook , StringFormat={}Номер книги: {0}}"/>
+                                            </StackPanel>
+                                        </Grid>
+
+                                      
+                                        <Grid Grid.Column="3">
+                                            <!-- Кнопка редактирование -->
+                                            <Grid x:Name="gridButton" Style="{StaticResource checkRole}" HorizontalAlignment="Right"
+                                                         Margin="0 10 10 0">
+                                                <Button x:Name="btnEditExtradition" Click="btnEditExtradition_Click"
+                                                        Focusable="False" HorizontalAlignment="Right"
+                                                        VerticalAlignment="Top"
+                                                        Style="{StaticResource btnEditImage}">
+
+                                                    <fa:IconImage Icon="Edit" Height="16"  Style="{StaticResource fa:IconImageTopButton}"/>
+                                                    <Button.ToolTip >
+                                                        <ToolTip Width="140">
+                                                            <TextBlock Text="Редактировать книгу"/>
+                                                        </ToolTip>
+                                                    </Button.ToolTip>
+                                                </Button>
+                                            </Grid>
+                                            <!---->
+
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+
+                                                <TextBlock x:Name="tbNamberZl" Visibility="Collapsed" Text="{Binding IdTypeOfHalls}"/>
+                                                
+                                                <TextBlock Style="{StaticResource tbListView}" x:Name="tbTypeUsers"
+                                                           
+                                                               HorizontalAlignment="Right" VerticalAlignment="Bottom" Visibility="Collapsed" Margin="10"
+                                                               Text="{Binding TypeUsers}"/>
+
+
+                                                <StackPanel VerticalAlignment="Bottom">
+
+                                                    <!--Тип ученика-->
+                                                    <Button Style="{StaticResource btnTopMenuCheck}"                                                
+                                                      VerticalAlignment="Bottom" Margin="0 0 20 10"
+                                                    HorizontalAlignment="Right"/>
+                                                
+                                                    <!--Тип выдачи-->
+                                                    <Button Style="{StaticResource btnExtraditionCheck}"
+                                                            Margin="0 0 20 10" VerticalAlignment="Bottom"
+                                                            HorizontalAlignment="Right" x:Name="tbStatys"/>
+
+                                                </StackPanel>
+
+    
+
+                                            </StackPanel>
+                                        </Grid>
+                                    </Grid>
+
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+
+            <Border  x:Name="borderImageBook"
+                     Visibility="Collapsed"
+                     Margin="10 0 20 20"
+                     CornerRadius="10" Background="Transparent" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="140"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="140"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border Background="Gray" CornerRadius="10 0 0 10" Opacity="0.5" Grid.Column="0">
+
+                    </Border>
+
+                    <Button x:Name="btnBorder"
+                            Grid.Column="1"
+                            Margin="0 17 10 0"
+                            Style="{StaticResource btnCross}"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Right"
+                            Panel.ZIndex="1"
+                            Click="btnBorder_Click">
+
+                        <fa:IconImage Style="{StaticResource iconCrossStyle}" Margin="16 -6 0 0" Icon="Plus">
+                            <fa:IconImage.RenderTransform>
+                                <RotateTransform Angle="44"/>
+                            </fa:IconImage.RenderTransform>
+                        </fa:IconImage>
+                        <Button.ToolTip>
+                            <TextBlock
+                                Text="Закрыть картинку"
+                                Width="auto" Margin="10 0 10 0">
+                            </TextBlock>
+                        </Button.ToolTip>
+                    </Button>
+                    <Border Background="Gray" 
+                            Opacity="0.5" x:Name="borderImage" Grid.Column="1">
+
+                    </Border>
+
+                    <Border  Background="White" Margin="0 10 0 10" CornerRadius="10" Grid.Column="1">
+                        <Grid>
+                            <Image Margin="5">
+                                <Image.Source>
+                                    <Binding Path="Image">
+                                        <Binding.TargetNullValue>
+                                            <ImageSource>
+                                                /Resources/imageNull.png
+                                            </ImageSource>
+                                        </Binding.TargetNullValue>
+                                    </Binding>
+                                </Image.Source>
+                            </Image>
+                        </Grid>
+                    </Border>
+                    <Border Background="Gray" CornerRadius="0 10 10 0"  Opacity="0.5" Grid.Column="2">
+
+                    </Border>
+                </Grid>
+            </Border>
+
+            <Border  x:Name="borderTypeBook"
+                     Visibility="Collapsed"
+                     Margin="10 0 20 20"
+                     CornerRadius="10" Background="Transparent" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="140"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="142"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border Background="Gray" CornerRadius="10 0 0 10" Opacity="0.5" Grid.Column="0"/>
+                    <Border Background="Gray" Opacity="0.5" x:Name="borderTextInfo" Grid.Column="1"/>
+
+                    <Border  Background="White" HorizontalAlignment="Center" VerticalAlignment="Center"
+                             Width="350" CornerRadius="10" Height="120" Grid.Column="1">
+                        <Grid>
+                            <Button x:Name="btnСancel"
+                                            Grid.Column="1"
+                                            Margin="0 5 10 0"
+                                            Style="{StaticResource btnCross}"
+                                            VerticalAlignment="Top"
+                                            HorizontalAlignment="Right"
+                                            Panel.ZIndex="1"
+                                            Click="btnСancel_Click">
+
+                                <fa:IconImage Style="{StaticResource iconCrossStyle}" Margin="16 -6 0 0" Icon="Plus">
+                                    <fa:IconImage.RenderTransform>
+                                        <RotateTransform Angle="44"/>
+                                    </fa:IconImage.RenderTransform>
+                                </fa:IconImage>
+                                <Button.ToolTip>
+                                    <TextBlock   Text="Отмена"  Width="auto" Margin="10 0 10 0"/>
+                                </Button.ToolTip>
+                            </Button>
+                            <StackPanel HorizontalAlignment="Center">
+                                <TextBlock FontSize="16" Margin="7 5 0 0" Text="Выберите где книга будет"/>
+                                <TextBlock FontSize="16" Margin="80 0 0 0" Text="находится"/>
+                                <StackPanel Orientation="Horizontal" Margin="0 20 0 0">
+                                    <Button Style="{StaticResource btnLibrarian}" x:Name="btnLiabrarian" Click="btnLiabrarian_Click"/>
+                                    <Button Style="{StaticResource btnReadingRoom}" Margin="50 0 0 0" x:Name="btnReadingRoom" Click="btnReadingRoom_Click"/>
+                                </StackPanel>
+                            </StackPanel>
+
+                        </Grid>
+                    </Border>
+                    <Border Background="Gray" CornerRadius="0 10 10 0"  Opacity="0.5" Grid.Column="2"/>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Page>

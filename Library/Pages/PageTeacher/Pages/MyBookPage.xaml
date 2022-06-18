@@ -1,0 +1,256 @@
+﻿<Page x:Class="Library.Pages.PageTeacher.PagesTeachers.Pages.MyBookPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Library.Pages.PageTeacher.PagesTeachers.Pages"
+      xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MyBookPage">
+    <Grid>
+
+        
+        <!--Скрытая кнопка обновления-->
+        <Button x:Name="btnAppdate" KeyDown="btnAppdate_KeyDown" Visibility="Collapsed"/>
+        <!--/Скрытая кнопка обновления-->
+        
+        <TextBlock Text="Мои книги" Style="{StaticResource TextTitle}"/>
+
+        <WrapPanel Orientation="Horizontal"                   
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Top"
+                   Width="auto"
+                   Margin="145 0 0 0"
+                   Height="auto">
+
+            <TextBox Style="{StaticResource tbPoiskStyle}" x:Name="tbPoisk"  VerticalAlignment="Top"
+                     Margin="110 3 0 0" TextChanged="tbPoisk_TextChanged" Width="350" HorizontalAlignment="Left">
+                <TextBox.ToolTip>
+                    <TextBlock Width="auto" Margin="10 0 10 0" Text="название книги, автор, год издания"/>
+                </TextBox.ToolTip>
+            </TextBox>
+
+            <TextBlock x:Name="Placeholder" IsHitTestVisible="False"                                        
+                           Text="Поиск:"
+                           FontWeight="Bold"
+                           Margin="-340 8 0 0"                            
+                           VerticalAlignment="Top"                       
+                           Foreground="DimGray"
+                           HorizontalAlignment="Left">
+
+                <TextBlock.Style>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Setter Property="Visibility" Value="Collapsed"/>
+                        <Setter Property="FontFamily"  Value="Comic Sans MS"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Text, ElementName=tbPoisk}" Value="">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+
+            <Button Style="{StaticResource btnCrossAndRollUp}"
+                    Panel.ZIndex="1" Margin="-60 7 0 0"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    x:Name="btnPoisk" Click="btnPoisk_Click" IsDefault="True">
+
+                <fa:IconImage Style="{StaticResource poiskIcon}"/>
+                <Button.ToolTip>
+                    <ToolTip Width="270" Height="60" Style="{StaticResource ToolTipPoisk}"/>
+                </Button.ToolTip>
+
+            </Button>
+
+
+
+        </WrapPanel>
+
+
+        <StackPanel Panel.ZIndex="1" Visibility="Collapsed"
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal"
+                    x:Name="tbInfo">
+
+            <fa:IconImage Icon="Frown" Foreground="#5b60c4" Height="70" Width="70"/>
+            <TextBlock Text="Ничего не найдено" Margin="20 0 0 0" FontSize="26" Style="{StaticResource menuButtonText}"/>
+        </StackPanel>
+
+
+        <Border CornerRadius="10" Margin="10 75 20 20">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
+                    <GradientStop Color="#4169E1" Offset="0"/>
+                    <GradientStop Color="#ADD8E6" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid>
+                <StackPanel>
+
+                <ScrollViewer PreviewMouseWheel="ScrollViewer_PreviewMouseWheel"  VerticalScrollBarVisibility="Auto">
+
+                    <StackPanel Margin="10 10 10 0">
+
+                            <ListView  FocusVisualStyle="{x:Null}"  SelectionChanged="listBook_SelectionChanged"  x:Name="listBook"   BorderThickness="0" Background="Transparent">
+
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Border 
+                                            Canvas.Top="30"
+                                            Width="100"                                
+                                            Margin="0 5 0 5"
+                                            HorizontalAlignment="Left"       
+                                            BorderBrush="Blue"
+                                            BorderThickness="1"
+                                            CornerRadius="10">
+
+                                            <Border.Effect>
+                                                <DropShadowEffect BlurRadius="20"
+                                                                  Opacity=".5"
+                                                                  ShadowDepth="1" />
+                                            </Border.Effect>
+
+                                            <Border Name="ReceiverColor"
+                                                    BorderBrush="#FF96B2E4"
+                                                    BorderThickness="2"
+                                                    CornerRadius="10">
+                                                <Grid>
+                                                    <Border  Name="Mask"
+                                                             Background="White"
+                                                             BorderBrush="#FF3B5998"
+                                                             BorderThickness="0"
+                                                             CornerRadius="10">
+                                                    </Border>
+                                                    <StackPanel>
+                                                        <Image Stretch="Fill" Margin="5" MouseLeftButtonDown="Image_MouseLeftButtonDown">
+                                                            <Image.Source>
+                                                                <Binding Path="Books.Image">
+                                                                    <Binding.TargetNullValue>
+                                                                        <ImageSource>
+                                                                            /Resources/imageNull.png
+                                                                        </ImageSource>
+
+                                                                    </Binding.TargetNullValue>
+
+                                                                </Binding>
+                                                            </Image.Source>
+                                                        </Image>
+                                                        <StackPanel.OpacityMask>
+                                                            <VisualBrush Visual="{Binding ElementName=Mask}" />
+                                                        </StackPanel.OpacityMask>
+                                                    </StackPanel>
+                                                </Grid>
+                                            </Border>
+                                        </Border>
+
+                                        <TextBlock Text="{Binding Books.NameBook}"
+                                                   Margin="110 9 0 0" FontSize="20" HorizontalAlignment="Left"/>
+
+                                        <TextBlock Text="Автор книги:"
+                                                   Margin="110 45 0 0" Style="{StaticResource tbListView}"/>
+
+                                        <TextBlock Text="{Binding  Books.AuthorOfThebook}"
+                                                   Margin="205 45 0 0" Style="{StaticResource tbListView}"/>
+
+
+                                        <TextBlock Text="Год издания:"
+                                                   Margin="110 65 0 0" Style="{StaticResource tbListView}"/>
+
+                                        <TextBlock Text="{Binding Books.YearOfPublication, StringFormat=MM.dd.yyyy}"
+                                                   Margin="205 65 0 0" Style="{StaticResource tbListView}"/>
+
+                                        <TextBlock Margin="380 50 0 0" Visibility="Collapsed" x:Name="tbElectronik" Text="{Binding Books.ElectronicVersion}"/>
+
+                                        <Button Style="{StaticResource btnDocumentText}" Content="Электронная версия"
+                                                HorizontalAlignment="Left" x:Name="btnDocument" Click="btnDocument_Click" Margin="110 75 0 0"
+                                                Panel.ZIndex="2"/>
+
+                                        <TextBlock Text="Книга выдана:" 
+                                                   FontSize="14"
+                                                   HorizontalAlignment="Right"
+                                                   VerticalAlignment="Bottom"
+                                                   Margin="0 0 190 5"/>
+
+                                        <TextBlock VerticalAlignment="Bottom"
+                                                   TextWrapping="Wrap" HorizontalAlignment="Right"
+                                                   Margin="0 0 58 5" FontSize="14"
+                                                   Text="{Binding Teachers.FullName}"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackPanel>
+                </ScrollViewer>
+            </StackPanel>
+
+            <Border  x:Name="borderImageBook"
+                     Visibility="Collapsed"
+                    
+                     CornerRadius="10" Background="Transparent" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="140"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="140"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border Background="Gray" CornerRadius="10 0 0 10" Opacity="0.5" Grid.Column="0">
+
+                    </Border>
+
+                    <Button x:Name="btnBorder"
+                            Grid.Column="1"
+                            Margin="0 17 10 0"
+                            Style="{StaticResource btnCross}"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Right"
+                            Panel.ZIndex="1"
+                            Click="btnBorder_Click">
+
+                        <fa:IconImage Style="{StaticResource iconCrossStyle}" Margin="16 -6 0 0" Icon="Plus">
+                            <fa:IconImage.RenderTransform>
+                                <RotateTransform Angle="44"/>
+                            </fa:IconImage.RenderTransform>
+                        </fa:IconImage>
+                        <Button.ToolTip>
+                            <TextBlock
+                                Text="Закрыть картинку"
+                                Width="auto" Margin="10 0 10 0">
+                            </TextBlock>
+                        </Button.ToolTip>
+                    </Button>
+                    <Border Background="Gray"  Opacity="0.5" x:Name="borderImage" Grid.Column="1">
+
+                    </Border>
+
+                    <Border  Background="White" Margin="0 10 0 10" CornerRadius="10" Grid.Column="1">
+                        <Grid>
+                            <Image Margin="5">
+                                <Image.Source>
+                                    <Binding Path="Image">
+                                        <Binding.TargetNullValue>
+                                            <ImageSource>
+                                                /Resources/imageNull.png
+                                            </ImageSource>
+                                        </Binding.TargetNullValue>
+                                    </Binding>
+                                </Image.Source>
+                            </Image>
+                        </Grid>
+                    </Border>
+                    <Border Background="Gray" CornerRadius="0 10 10 0"  Opacity="0.5" Grid.Column="2">
+
+                    </Border>
+                </Grid>
+            </Border>
+            </Grid>
+        </Border>
+       
+    </Grid>
+</Page>

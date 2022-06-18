@@ -1,0 +1,56 @@
+﻿<Page x:Class="Library.Pages.PagePrint.VidachaAllBookPrint"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+       xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp" 
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="VidachaAllBookPrint" Loaded="Page_Loaded">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        
+        <FlowDocumentScrollViewer Grid.Row="0"
+            HorizontalScrollBarVisibility="Auto"
+            VerticalScrollBarVisibility="Auto">
+            <FlowDocument x:Name="flowDocument"  Background="White" ColumnWidth="auto" MinPageHeight="700" FontFamily="Comic Sans Ms">
+                <BlockUIContainer>
+                    <DataGrid x:Name="dateGrid" Width="auto" ScrollViewer.HorizontalScrollBarVisibility="Hidden"  
+                              CanUserResizeColumns="True">
+                             <DataGrid.Columns >
+                                 <DataGridTextColumn Header="Номер книги"  Width="98" Binding="{Binding Books.NamberBook}"/>
+                                 <DataGridTextColumn Header="Название книги" Width="180" Binding="{Binding Books.NameBook}"/>
+                                 <DataGridTextColumn Header="Выдана" Width="183" Binding="{Binding FullName}"/>
+                                 <DataGridTextColumn Header="Тип" Width="158" Binding="{Binding TypeUsers}"/>
+                              
+                                 <DataGridTextColumn Header="Дата выдачи" Width="176" Binding="{Binding DateOfISsue, StringFormat={}{0:dd.MM.yyyy}}"/>
+                                 <DataGridTextColumn Header="До" Width="*" Binding="{Binding EndDate, StringFormat={}{0:dd.MM.yyyy}}"/>
+                            </DataGrid.Columns>
+
+                     </DataGrid>
+                </BlockUIContainer>
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+
+        <Grid Background="Gray" Opacity="0.7" Grid.Row="1">
+            
+        </Grid>
+
+        <Button x:Name="btnPrint" HorizontalAlignment="Center"
+                  Panel.ZIndex="1" Grid.Row="1"
+                 Click="btnPrint_Click"
+                 Focusable="False"                                                             
+                 Margin="10 0 0 0" Style="{StaticResource btnPrint}">
+            <StackPanel Orientation="Horizontal">
+                <fa:IconImage Icon="Print"  Margin="0" Height="20" Style="{StaticResource fa:IconImagepRrint}" />
+
+                <TextBlock Text="Печать" Style="{StaticResource menuButtonText}"/>
+            </StackPanel>
+        </Button>
+
+    </Grid>
+</Page>

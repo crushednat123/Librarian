@@ -1,0 +1,161 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp">
+    <!--Текст первых букв имени и фамилии -->
+    <Style TargetType="TextBlock" x:Key="tbNameAndSurname">
+        <Setter Property="Foreground" Value="{StaticResource TextColor}"/>
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="3 0 0 2"/>
+        <Setter Property="FontFamily" Value="Comic Sans MS"/>
+    </Style>
+
+    <!--Стиль по умолчанию-->
+    <Style TargetType="TextBlock">
+        <Setter Property="FontFamily"  Value="Comic Sans MS"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+
+    </Style>
+
+
+    <!--Стиль  текста в ListView-->
+    <Style TargetType="TextBlock" x:Key="tbListView">
+        <Setter Property="FontFamily"  Value="Comic Sans MS"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="FontSize" Value="14"/>
+    </Style>
+
+
+
+    <!--Стиль  текста  Id в ListView-->
+    <Style TargetType="TextBlock" x:Key="tbListViewId">
+        <Setter Property="FontFamily"  Value="Comic Sans MS"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ElementName=tbRole, Path=Text}"
+                         Value="4">
+                <!--Ученик-->
+                <Setter Property="Visibility" Value="Collapsed"/>
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding ElementName=tbRole, Path=Text}"
+                         Value="3">
+                <!--Учитель-->
+                <Setter Property="Visibility" Value="Collapsed"/>
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding ElementName=tbRole, Path=Text}"
+                         Value="2">
+                <!--Библиотекарь-->
+                <Setter Property="Visibility" Value="Visible"/>
+
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <!--Стиль текста при присутствии документа-->
+    <Style TargetType="TextBlock" x:Key="tbDocyment">
+        <Setter Property="FontFamily"  Value="Comic Sans MS"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ElementName=tbElectronic, Path=Text}"
+                         Value="Byte[] Array">
+                <Setter Property="Text" Value="Документ уже загружен"/>
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding ElementName=tbElectronic, Path=Text}"
+                         Value="">
+                <Setter Property="Text" Value=""/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <!--Стиль текста при присутствии картинки-->
+    <Style TargetType="TextBlock" x:Key="tbImageCheck">
+        <Setter Property="FontFamily"  Value="Comic Sans MS"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ElementName=tbImageCheck, Path=Text}"
+                         Value="Byte[] Array">
+                <Setter Property="Text" Value="Картинка уже загружена"/>
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding ElementName=tbImageCheck, Path=Text}"
+                         Value="">
+                <Setter Property="Text" Value=""/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--Стиль заголовков в страницах-->
+    <Style TargetType="TextBlock" x:Key="TextTitle" >
+        <Setter Property="FontSize" Value="42"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Margin" Value="20 -17 0 20"/>
+        <Setter Property="FontFamily"  Value="Comic Sans MS"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+
+    </Style>
+    
+    <!--Текст названии программы-->
+    <Style TargetType="TextBlock" x:Key="titlePogram">
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontSize"  Value="18"/>
+    </Style>
+
+    <!--Текст имени и фамилии -->
+    <Style TargetType="TextBlock" x:Key="tbNameSurname">
+        <Setter Property="Foreground" Value="{StaticResource TextColorNameSurname}"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="Margin" Value="0 0 0 5"/>
+        <Setter Property="FontFamily" Value="Comic Sans MS"/>
+    </Style>
+
+
+    <!--Текст номер версии ПО -->
+    <Style TargetType="TextBlock" x:Key="tbNumberVersion">
+        <Setter Property="Foreground" Value="{StaticResource TextColorVersionNumber}"/>
+        <Setter Property="FontSize" Value="11"/>
+        <Setter Property="FontFamily" Value="Comic Sans MS"/>
+    </Style>
+
+    <!--Цвет текста в меню у кнопок-->
+    <Style TargetType="TextBlock" x:Key="menuButtonText">
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="FontFamily" Value="Comic Sans MS"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor,
+            AncestorType={x:Type Button}}}"/>
+    </Style>
+
+    <!--Секция 2-->
+    <Style TargetType="TextBlock" x:Key="titleText">
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Margin" Value="10 0 0 0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontFamily" Value="Comic Sans MS"/>
+    </Style>
+
+    <Style x:Key="titleIcon" TargetType="fa:IconImage">
+        <Setter Property="Width" Value="18"/>
+        <Setter Property="Height" Value="18"/>
+        <Setter Property="Margin" Value="0 3 0 0"/>
+        <Setter Property="Foreground" Value="{StaticResource ColorIconCekcia2}"/>
+    </Style>
+
+    <!--  __________________________________________________________________________________   -->
+</ResourceDictionary>

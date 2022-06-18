@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="353a27cd65744bce8fe732ce83f7e754" Name="Diagram1">
+        <EntityTypeShape EntityType="LibraryModel.BookLocations" Width="1.5" PointX="3.75" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Books" Width="1.5" PointX="6" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Classes" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.ClassTheLetters" Width="1.5" PointX="1.5" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.DeliveryServices" Width="1.5" PointX="3.75" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Extraditions" Width="1.5" PointX="8.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Genders" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.HistoriExtradition" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Items" Width="1.5" PointX="3.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Librarian" Width="1.5" PointX="9" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Role" Width="1.5" PointX="9" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.SchoolBoy" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.sysdiagrams" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Teachers" Width="1.5" PointX="6" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.TypeOfHalls" Width="1.5" PointX="1.5" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.TypeSuppliers" Width="1.5" PointX="1.5" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Users" Width="1.5" PointX="11.25" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="LibraryModel.FK_BookLocations_TypeOfHalls" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_Books_BookLocations" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_Books_Classes" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_Books_DeliveryServices" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_Books_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_ExtraditionsSchool_Books" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_Classes_ClassTheLetters" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_Extraditions_Classes" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_SchoolBoy_Classes" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_Teachers_Classes" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_DeliveryServices_TypeSuppliers" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_Extraditions_Teachers" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_Extraditions_TypeOfHalls" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_ExtraditionsSchool_SchoolBoy" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_SchoolBoy_Genders" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_Teachers_Genders" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_Teachers_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_Users_Librarian" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_SchoolAndTeachers_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_SchoolAndTeachers_SchoolBoy" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_SchoolAndTeachers_Teachers" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
