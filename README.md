@@ -11,4 +11,4 @@
 4) Добавить заново в папку Entities (ПКМ / Добавить / Создать элемент / Модель Ado.Net Edm)
 5) После добовления переходим в файл 
  
-![image info](https://github.com/crushednat123/Librarian/raw/master/Librarian/pictures/bd1.png)
+[![image info](https://github.com/crushednat123/Librarian/raw/master/Librarian/pictures/bd1.png)](https://github.com/crushednat123/Librarian/tree/main/img/bd1.png)
