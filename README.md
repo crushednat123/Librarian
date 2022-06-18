@@ -12,3 +12,7 @@
 5) После добовления переходим в файл 
  
 ![Image alt](https://github.com/crushednat123/Librarian/blob/main/img/bd1.png)
+
+6) Добавляем строку 
+
+![Image alt](https://github.com/crushednat123/Librarian/blob/main/img/bd2.png)
